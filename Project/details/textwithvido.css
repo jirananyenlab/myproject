@@ -1,0 +1,47 @@
+.textAnimation h6{
+    position:relative;
+   font-size: 3em;
+    font-family:sans-serif ;
+    -webkit-text-stroke: 0.2vw rgb(36, 35, 35);
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    color: rgb(16, 15, 15);
+
+}
+.textAnimation h6::before{
+   content: attr(data-text);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   color: #fcfbfd;
+   -webkit-text-stroke: 0vw rgb(217, 103, 103);
+   border-right: 2px solid #c12c2cf5;
+   overflow: hidden;
+   animation: animate 10s linear infinite;
+   -webkit-animation: animate 10s linear infinite;
+
+}
+.textAnimation{
+ height: auto;
+margin:auto;
+padding: 1em;
+grid-area: 2;
+}
+.textAnimation a:link ,.textAnimation a:visited{
+ color: rgba(0, 0, 0, 0);
+}
+.textAnimation h6:hover , .textAnimation h6:active  {
+-webkit-text-stroke: 0.1vw rgba(228, 227, 227, 0.436);
+}
+
+@keyframes animate{
+
+0%{
+    width: 0;
+}
+70%{
+    width: 100%;
+}
+}
